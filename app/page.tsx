@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FirstLightForm } from "@/components/FirstLightForm";
 import { PieceCard } from "@/components/PieceCard";
 import { SunMark } from "@/components/SunMark";
 import { featuredPieces, processSteps } from "@/content/site";
@@ -196,27 +197,7 @@ export default function Home() {
           </p>
         </div>
 
-        <form
-          className="email-form"
-          name="first-light"
-          method="POST"
-          action="/thanks"
-          data-netlify="true"
-        >
-          <input type="hidden" name="form-name" value="first-light" />
-          <label htmlFor="email">Email address</label>
-          <div>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button type="submit">Join the list</button>
-          </div>
-        </form>
+        <FirstLightForm />
       </section>
 
       <footer>

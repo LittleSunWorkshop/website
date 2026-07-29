@@ -49,6 +49,7 @@ components/
 content/
   site.ts               Featured pieces and process copy
 public/
+  __forms.html          Static Netlify Forms detection manifest
   brand/                Brand artwork
   products/             Product photography
 netlify.toml             GitHub-to-Netlify build configuration

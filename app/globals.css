@@ -766,6 +766,17 @@ blockquote {
   background: var(--cactus);
 }
 
+.email-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
 footer {
   background: var(--ink);
   color: var(--paper);
