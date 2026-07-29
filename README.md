@@ -1,23 +1,23 @@
 # Little Sun Workshop
 
-The website home for Little Sun Workshop, a small-batch beaded jewelry brand.
-This first commit establishes the project structure and a lightweight visual
-starting point. Product photography, final brand copy, commerce, and customer
-features will be added as the business takes shape.
+The website for Little Sun Workshop, handcrafted jewelry made in Phoenix,
+Arizona. The current version is a visually complete brand foundation with real
+product photography, a Netlify-ready email signup form, and room to grow into a
+full shop.
 
 ## Stack
 
-- React and TypeScript
-- Next-compatible routing through vinext
-- Vite development and production builds
-- Cloudflare-ready output
-- Plain CSS for the initial visual system
+- Next.js 16, React, and TypeScript
+- Plain CSS with a project-specific visual system
+- Netlify deployment from GitHub
+- Netlify Forms for the early-access list
+- pnpm for package management
 
 ## Local development
 
 Requirements:
 
-- Node.js 22.13 or newer
+- Node.js 22
 - pnpm 11
 
 ```bash
@@ -25,15 +25,14 @@ pnpm install
 pnpm dev
 ```
 
-Then open the local URL printed in the terminal.
+Open the local URL printed in the terminal.
 
-## Useful commands
+## Commands
 
 ```bash
-pnpm dev       # Start the local development server
-pnpm dev:worker # Start the Cloudflare worker preview (macOS 13.5+)
-pnpm build     # Create and validate a production build
-pnpm test      # Build and test the rendered homepage
+pnpm dev       # Start local development
+pnpm build     # Create a production build
+pnpm test      # Check the site foundation and required assets
 pnpm lint      # Run code quality checks
 ```
 
@@ -41,21 +40,36 @@ pnpm lint      # Run code quality checks
 
 ```text
 app/
-  layout.tsx      Site metadata and shared page shell
-  page.tsx        Current homepage
-  globals.css     Brand tokens, layout, and responsive styles
+  page.tsx              Homepage composition and copy
+  globals.css           Complete brand and responsive design system
+  thanks/page.tsx       Netlify form confirmation page
+components/
+  PieceCard.tsx         Reusable product preview
+  SunMark.tsx           Code-native sun accent
+content/
+  site.ts               Featured pieces and process copy
 public/
-  brand/          Future logos and identity assets
-  products/       Future optimized product photography
-db/               Optional data layer for later phases
-tests/            Rendered-page checks
-.openai/          Optional hosting configuration
+  brand/                Brand artwork
+  products/             Product photography
+netlify.toml             GitHub-to-Netlify build configuration
 ```
+
+## Deploying to Netlify
+
+1. In Netlify, choose **Add new site → Import an existing project**.
+2. Connect GitHub and select `LittleSunWorkshop/website`.
+3. Netlify will read `netlify.toml`; no build settings should need changing.
+4. Deploy the `main` branch.
+5. Add the final domain in **Domain management**, then point the domain’s DNS
+   records to the values Netlify provides.
+
+Do not change DNS until the Netlify preview is approved and the custom domain
+has been added to the site.
 
 ## Next decisions
 
-1. Confirm the brand story, tone, and final business name styling.
-2. Gather product categories, pricing, descriptions, and photography.
-3. Choose the first sales path: inquiry, Etsy links, Shopify, or a custom shop.
-4. Add contact details, social accounts, policies, shipping, and care guidance.
-5. Connect the domain and deploy when the first public version is ready.
+1. Confirm final product names, prices, materials, and availability.
+2. Add the maker’s name and full workshop story.
+3. Choose the sales path: Netlify-hosted storefront, Shopify, Etsy, or inquiry.
+4. Add Instagram, contact details, shipping, returns, and jewelry care.
+5. Create a final favicon and social sharing card from the approved brand art.

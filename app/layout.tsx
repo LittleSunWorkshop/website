@@ -7,7 +7,20 @@ export const metadata: Metadata = {
     template: "%s · Little Sun Workshop",
   },
   description:
-    "Small-batch, handmade beaded jewelry inspired by color, desert light, and everyday joy.",
+    "Handcrafted jewelry made in Phoenix, Arizona—small-batch pieces inspired by color, desert light, and everyday joy.",
+  keywords: [
+    "handcrafted jewelry",
+    "Phoenix jewelry",
+    "Arizona maker",
+    "beaded jewelry",
+    "Little Sun Workshop",
+  ],
+  openGraph: {
+    title: "Little Sun Workshop",
+    description:
+      "Handcrafted jewelry made with color, care, and a little Phoenix sun.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
