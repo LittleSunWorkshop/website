@@ -18,7 +18,7 @@ export function PieceCard({ piece, index }: PieceCardProps) {
           src={piece.image}
           alt={piece.alt}
           fill
-          sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          sizes="(max-width: 560px) 82vw, (max-width: 1100px) 50vw, 33vw"
         />
         <span>{String(index + 1).padStart(2, "0")}</span>
       </div>

@@ -103,6 +103,10 @@ export default function Home() {
           </p>
         </div>
 
+        <p className="collection-mobile-note" aria-hidden="true">
+          Swipe through the work <span>→</span>
+        </p>
+
         <div className="piece-grid">
           {featuredPieces.map((piece, index) => (
             <PieceCard piece={piece} index={index} key={piece.name} />
